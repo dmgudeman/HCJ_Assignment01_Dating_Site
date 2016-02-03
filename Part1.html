@@ -25,14 +25,13 @@
            </fieldset>
            <fieldset>
                 <legend>Your General Details</legend>
-                    Name:<input type="text" name="firstname"></br>
-                    Gender:<input type="radio" name="gender" value="male">Male  
+                    <label for="firstLastName">Name: </label><input type="text" name="firstLastName" id="firstLastName" required></br>
+                    <label for="gender">Gender: </label><input type="radio" name="gender" value="male" id="gender" required>Male  
                         <input type="radio" name="gender" value="female">Female</br>
-                    Age:<input type="number" min="0" max="99" step="1" value="18"
-                        id="age" name="age" required></br>
-                    Date of Birth:<input type="date" name="birthday"></br>
-                    Favorite color:<input type="color" id="color" name="color"></br>
-                    Which country:<input type="text" id="country" name="country"></br>
+                    <label for="age">Age: </label><input type="number" min="0" max="99" step="1" id="age" name="age" required></br>
+                    <label for="birthday">Date of Birth: </label><input type="date" name="birthday" id="birthday" required ></br>
+                    <label for="color">Favorite color: </label><input type="color" id="color" name="color" required></br>
+                    <label for="country">Which country: </label><input type="text" id="country" name="country" required></br>
             </fieldset>
             <fieldset>
                 <legend>Your Indicators</legend>
