@@ -4,41 +4,109 @@
 <!--January 27, 2016-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Start of Style
         <style>
-            .checkbox {display: inline;}
+            
+            
+           fieldset {
+                        border: 10px solid yellow;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        min-width: 700px;
+                        display: inline-block;
+                        background: lightyellow;
+                        
+}
+
+
+
+fieldset label{
+    margin-right: 10px;
+    width:180px;
+    position: relative;
+    display: inline;
+    text-align: right;
+    text-align: top;
+        
+    
+}
+            .checkbox {display: inline;
+                        width:auto;
+            }
+            .address {width:360px height:50px}
+/*
+fieldset label:after{
+    content: ": ";
+    position: absolute;
+    right: -0.2em;
+}
+            fieldset li{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 2px;
+}
+*/
+
+          
             
         </style>
+    -->
     
     <title>Dating Site</title>
     
     </head>
     <body>
         <H1>Please Enter Your Details For Our Dating Website!</H1>
-       <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
-            <fieldset>
+       <form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+           <fieldset>
+                <legend>Your Face</legend>
+                                     
+                        <label for="avatar">Your Image</label>
+                      <input type="file" id="avatar" name="fileToUpload"></br>
+               
+                      <label for="picture" vertical="top">image preview: </label><img scr="Hi.png" width="200" id="preview" required>
+                        
+                        
+                  
+            </fieldset>
+           <fieldset>
                 <legend>Your General Details</legend>
                 Name:<input type="text" name="firstname"></br>
-           Gender:<input class= "radio" type="checkbox" name="gender" value="male">Male</br>
-                  <input class= "radio" type="checkbox" name="gender" value="female">Female</br>
+                Gender:<input type="radio" name="gender" value="male">Male  
+                  <input type="radio" name="gender" value="female">Female</br>
                 Age:<input type="number" min="0" max="99" step="1" value="18"
                     id="age" name="age" required></br>
                 Date of Birth:<input type="date" name="birthday"></br>
                 Favorite color:<input type="color" id="color" name="color"></br>
                 Which country:<input type="text" id="country" name="country"></br>
-        
-        
             </fieldset>
-        <input type="submit" value="send">
-
-
+            <fieldset>
+                <legend>Your Indicators</legend>
+                    Height: Short<input type="range" min="0" max="100" step="5" value="50" id="mood">Tall</br>
+                    Salary: Poor<input type="range" min="0" max="100" step="5" value="50" id="mood">Rich</br>
+    </fieldset>
+            <fieldset>
+                <legend>Your Contact Information</legend>
+                    <label for="email">Email: </label><input type="email" id="email" name="email" required><</br>
+                    <label for="mobile">Mobile: </label><input class= "tel" name="mobile" id="mpbile"></br>
+                    <label for="address">Address: </label><textarea class="address" required></textarea></br>
+                    <label for="method">Method to contact you: </label>
+                    <input class= "radio" type="checkbox" name="method" id="method" value="email">Email 
+                    <input class= "radio" type="checkbox" name="method" value="whatsapp">Whatsapp
+                    <input class= "radio" type="checkbox" name="method" value="inappchat">In-app chat</br>
+               
+    </fieldset> </br>  
+            <button type="submit" class="btn btn-default" value="everything">Submit</button>
+             
         </form>
-        
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
     </body>
 </html>
     
