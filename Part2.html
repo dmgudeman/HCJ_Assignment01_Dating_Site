@@ -58,8 +58,12 @@
                 display:inline-block;
                 width:360px;
                 height: 50px;
+                vertical-align: top;
                 }
-             }    
+            #preview {
+                display:inline-block;
+                vertical-align: top;
+            }
         </style>
 <!--Style end -->    
     <title>Dating Site</title>
@@ -67,13 +71,13 @@
     </head>
     <body>
         <H1>Please Enter Your Details For Our Dating Website!</H1>
-        <form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" class="formFieldSet">
+        <form method="post" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" class="formFieldSet">
            <fieldset>
                 <legend>Your Face</legend>
                 <label for="avatar">Your Image: </label>
                     <input type="file" id="avatar" name="fileToUpload" required></br>
-                <label for="picture" vertical="top">image preview: </label>
-                    <img scr="Hi.png" width="200" id="preview">
+                <label for="preview">image preview: </label>
+                    <img scr="Hi.png" width="200" class="imageMe" id="preview">
            </fieldset><br>
            <fieldset>
                 <legend>Your General Details</legend>

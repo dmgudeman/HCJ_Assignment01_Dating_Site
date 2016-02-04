@@ -60,7 +60,10 @@
                 height: 50px;
                 vertical-align: top;
                 }
-              
+            #preview {
+                display:inline-block;
+                vertical-align: top;
+            }  
             label:hover {
                 font-size: 20px;
             }
@@ -74,12 +77,12 @@
     </head>
     <body>
         <H1>Please Enter Your Details For Our Dating Website!</H1>
-        <form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" class="formFieldSet">
+        <form method="post" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" class="formFieldSet">
            <fieldset>
                 <legend>Your Face</legend>
                 <label for="avatar">Your Image: </label>
                     <input type="file" id="avatar" name="fileToUpload" required></br>
-                <label for="picture" vertical="top">image preview: </label>
+                <label for="preview" vertical="top">image preview: </label>
                     <img scr="Hi.png" width="200" id="preview">
            </fieldset><br>
            <fieldset>
